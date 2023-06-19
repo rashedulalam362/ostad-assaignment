@@ -70,15 +70,33 @@ function integerNumber(number) {
    
 }
  
-let number=8
+let number=6.4
+
+
 
 interResult=integerNumber(number)
-console.log(interResult);true
+console.log(interResult); // Output: true
+
+// .Window Object:
 
 
+// a. Create a function that opens a new window with a specified URL and dimensions (width and height).
 
+function openWindow (url,width,height){
+   let leftSide=(window.innerWidth -width)/2;
+   let top=(window.innerWidth -width)/2;
+   window.open(url, "_blank", `width=${width}, height=${height}, leftSide=${leftSide}, top=${top}`);
 
  
+}
+
+setInterval(()=>{
+  window.close()
+},6000)
+ 
+const windowResult =openWindow("https://www.example.com", 800, 600)
+
+console.log(windowResult);
    
  
 
