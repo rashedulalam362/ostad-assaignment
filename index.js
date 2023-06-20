@@ -10,30 +10,19 @@ function dateObject(dateString){
  
 
    let dayWeek=daysWeek[date.getDay()]
-   // console.log(dayWeek);
+   console.log(dayWeek);
    return dayWeek
 
 }
 
-const date = '2023-06-19';
+// const date = '2023-06-20';
 
-const result =dateObject(date)
-// console.log(result);
+const result =dateObject('2023-06-20')
+console.log(result);
 
 
-// Implement the function to display the day of the week for the current date.
 
-function getCurrentDayOfWeek() {
-   const currentDate = new Date();
-   const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-   const dayOfWeek = currentDate.getDay();
- 
-   return daysOfWeek[dayOfWeek];
- }
- 
- // Usage
- const currentDayOfWeek = getCurrentDayOfWeek();
-//  console.log(currentDayOfWeek); // Output: e.g., "monday"
+
 
 
 //  2.Math Object:
@@ -70,11 +59,11 @@ function integerNumber(number) {
    
 }
  
-let number=6.4
 
 
 
-interResult=integerNumber(number)
+
+interResult=integerNumber(8)
 console.log(interResult); // Output: true
 
 // .Window Object:
@@ -91,181 +80,199 @@ console.log(interResult); // Output: true
 // }
 
  
-// const windowResult =openWindow("https://www.example.com", 800, 600)
+// const windowResult =openWindow("https://www.amybd.com/index?v=987654490", 800, 600)
 
 // console.log(windowResult);
    
  
 // 5.Navigator Object
 
+function getBrowserInfo() {
+   var browserName = navigator.appName;
+   var browserVersion = navigator.appVersion;
+  
+}
+
+getBrowserInfo()
+
 // 6.Geolocation
 
-//   function userCuurentLocation() {
-//    var fun=navigator.geolocation.getCurrentPosition((position)=>{
-//       var altitude=position.coords.altitude;
-//       var longitude=position.coords.longitude;
-//       var latitude=position.coords.latitude;
+  function userCuurentLocation() {
+   var fun=navigator.geolocation.getCurrentPosition((position)=>{
+    
+      var longitude=position.coords.longitude;
+      var latitude=position.coords.latitude;
 
-//       document.write('latitude ' + latitude)
-//       document.write('altitude  ' + longitude)
+      document.write('latitude ' + latitude)
+      document.write('altitude  ' + longitude)
      
-//     })
+    })
    
-//    return fun
+   return fun
 
-//   }
+  }
 
-//  let  userCuurentLocationresult=userCuurentLocation()
-//   console.log(userCuurentLocationresult);
+ let  userCuurentLocationresult=userCuurentLocation()
+  console.log(userCuurentLocationresult);
 
 
   //7.JS Common Events:
+
+  function getRequest(){
+   alert('Get request')
+  }
  
+  function keydown(){
+   alert('Get keydown')
+   log('Get keydown')
+  }
 //   8.HTML DOM Document:
 
-// function validateForm() {
-//    var nameField = document.getElementById("name");
-//    var nameValue = nameField.value.trim();
-//    var namePattern = /^[A-Za-z]+$/;
-//    var nameError = document.getElementById("nameError");
-
-//    if (nameValue === "") {
-//      nameError.textContent = "Please enter your name.";
-//      nameField.focus();
-//      return false;
-//    }
-
-//    if (!namePattern.test(nameValue)) {
-//      nameError.textContent = "Name should contain only letters.";
-//      nameField.focus();
-//      return false;
-//    }
-
-//    nameError.textContent = "";
-
-//    var emailField = document.getElementById("email");
-//    var emailValue = emailField.value;
-//    var emailError = document.getElementById("emailError");
-
-//    if (emailValue === "") {
-//      emailError.textContent = "Please enter your email.";
-//      emailField.focus();
-//      return false;
-//    }
-
-//    emailError.textContent = "";
-
-//    var passwordField = document.getElementById("password");
-//    var passwordValue = passwordField.value;
-//    var passwordError = document.getElementById("passwordError");
-
-//    if (passwordValue.length < 8) {
-//      passwordError.textContent = "Password should be at least 8 characters long.";
-//      passwordField.focus();
-//      return false;
-//    }
-
-//    var confirmPasswordField = document.getElementById("confirmPassword");
-//    var confirmPasswordValue = confirmPasswordField.value;
-//    var confirmPasswordError = document.getElementById("confirmPasswordError");
-
-//    if (passwordValue !== confirmPasswordValue) {
-//      confirmPasswordError.textContent = "Confirm Password does not match Password.";
-//      confirmPasswordField.focus();
-//      return false;
-//    }
-
-//    var hasUppercase = /[A-Z]/.test(passwordValue);
-//    var hasLowercase = /[a-z]/.test(passwordValue);
-//    var hasDigit = /\d/.test(passwordValue);
-//    var passwordRequirementsError = "";
-
-//    if (!hasUppercase) {
-//      passwordRequirementsError += "Password should contain at least one uppercase letter. ";
-//    }
-
-//    if (!hasLowercase) {
-//      passwordRequirementsError += "Password should contain at least one lowercase letter. ";
-//    }
-
-//    if (!hasDigit) {
-//      passwordRequirementsError += "Password should contain at least one digit. ";
-//    }
-
-//    if (passwordRequirementsError !== "") {
-//      passwordError.textContent = passwordRequirementsError;
-//      passwordField.focus()
-//    }
 
 
+function validateForm() {
+   var nameField = document.getElementById("name");
+   var nameValue = nameField.value.trim();
+   var namePattern = /^[A-Za-z]+$/;
+   var nameError = document.getElementById("nameError");
 
-//    }
+   if (nameValue === "") {
+     nameError.textContent = "Please enter your name.";
+     nameField.focus();
+     return false;
+   }
+
+   if (!namePattern.test(nameValue)) {
+     nameError.textContent = "Name should contain only letters.";
+     nameField.focus();
+     return false;
+   }
+
+   nameError.textContent = "";
+
+   var emailField = document.getElementById("email");
+   var emailValue = emailField.value;
+   var emailError = document.getElementById("emailError");
+
+   if (emailValue === "") {
+     emailError.textContent = "Please enter your email.";
+     emailField.focus();
+     return false;
+   }
+
+   emailError.textContent = "";
+
+   var passwordField = document.getElementById("password");
+   var passwordValue = passwordField.value;
+   var passwordError = document.getElementById("passwordError");
+
+   if (passwordValue.length < 8) {
+     passwordError.textContent = "Password should be at least 8 characters long.";
+     passwordField.focus();
+     return false;
+   }
+
+   var confirmPasswordField = document.getElementById("confirmPassword");
+   var confirmPasswordValue = confirmPasswordField.value;
+   var confirmPasswordError = document.getElementById("confirmPasswordError");
+
+   if (passwordValue !== confirmPasswordValue) {
+     confirmPasswordError.textContent = "Confirm Password does not match Password.";
+     confirmPasswordField.focus();
+     return false;
+   }
+
+   var hasUppercase = /[A-Z]/.test(passwordValue);
+   var hasLowercase = /[a-z]/.test(passwordValue);
+   var hasDigit = /\d/.test(passwordValue);
+   var passwordRequirementsError = "";
+
+   if (!hasUppercase) {
+     passwordRequirementsError += "Password should contain at least one uppercase letter. ";
+   }
+
+   if (!hasLowercase) {
+     passwordRequirementsError += "Password should contain at least one lowercase letter. ";
+   }
+
+   if (!hasDigit) {
+     passwordRequirementsError += "Password should contain at least one digit. ";
+   }
+
+   if (passwordRequirementsError !== "") {
+     passwordError.textContent = passwordRequirementsError;
+     passwordField.focus()
+   }
+
+
+
+   }
 
 
 
    // 10.DOM Manipulate CSS Class:
 
-// function backgroungdImgaeChanged() {
+function backgroungdImgaeChanged() {
 
-//    let myPara=document.getElementById('my-para')
-//      myPara.style.background='red'
+   let myPara=document.getElementById('my-para')
+     myPara.style.background='red'
    
-// }
+}
 
-// function removeBackgroungdImgaeChanged() {
-//    let myPara=document.getElementById('my-para')
-//      myPara.style.background='none'
-// }
+function removeBackgroungdImgaeChanged() {
+   let myPara=document.getElementById('my-para')
+     myPara.style.background='none'
+}
 
 
 //11.Create Element & Append Element:
 
 
-// function adItems() {
-//    let inputValue=document.getElementById('input').value;
-//    let  listItems=document.createElement('li');
-//     listItems.innerHTML=inputValue;
-//   var  LitsItem=document.getElementById('list-items');
-//   LitsItem.appendChild(listItems)
+function adItems() {
+   let inputValue=document.getElementById('input').value;
+   let  listItems=document.createElement('li');
+    listItems.innerHTML=inputValue;
+  var  LitsItem=document.getElementById('list-items');
+  LitsItem.appendChild(listItems)
  
-// }
+}
 
 
 // 12.DOM Change Attribute Value:
 
-//  function imageChange() {
+ function imageChange() {
 
-//    myImg=document.getElementById('img')
-//    myImg.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjZUd44biMmyIlKY0g70iDnH3XqxtnPNROkQ&usqp=CAU"
-//    myImg.width="200"
-//    myImg.height='200'
+   myImg=document.getElementById('img')
+   myImg.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjZUd44biMmyIlKY0g70iDnH3XqxtnPNROkQ&usqp=CAU"
+   myImg.width="200"
+   myImg.height='200'
    
-//  }
+ }
 
 //13.DOM Query Selector:
 
-// function querySelectorfun() {
-//    document.querySelector("#my-id").style.color='red';
-//    document.querySelector(".my-class").style.color='red';
-//    document.querySelector("p[name='my-tag']").style.color='red';
+function querySelectorfun() {
+   document.querySelector("#my-id").style.color='red';
+   document.querySelector(".my-class").style.color='red';
+   document.querySelector("p[name='my-tag']").style.color='red';
       
-// }
+}
 
 // 14.AJAX Get Request:
 
-// function getApiRequest() {
+function getApiRequest() {
 
-//    const url='https://jsonplaceholder.typicode.com/posts'
-//    const confiquration={method:"GET"}
-//    fetch(url, confiquration)
-//    .then(response => response.json())
-//    .then(data=>{
-//       console.log(data);
-//    })
-//    .catch(err => console.log(err));
+   const url='https://jsonplaceholder.typicode.com/posts'
+   const confiquration={method:"GET"}
+   fetch(url, confiquration)
+   .then(response => response.json())
+   .then(data=>{
+      console.log(data);
+   })
+   .catch(err => console.log(err));
     
    
-// }
+}
 
 
 function postApiRequest() {
