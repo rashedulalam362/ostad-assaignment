@@ -244,9 +244,43 @@ console.log(interResult); // Output: true
 
 //13.DOM Query Selector:
 
-function querySelectorfun() {
-   document.querySelector("#my-id").style.color='red';
-   document.querySelector(".my-class").style.color='red';
-   document.querySelector("p[name='my-tag']").style.color='red';
+// function querySelectorfun() {
+//    document.querySelector("#my-id").style.color='red';
+//    document.querySelector(".my-class").style.color='red';
+//    document.querySelector("p[name='my-tag']").style.color='red';
       
+// }
+
+// 14.AJAX Get Request:
+
+// function getApiRequest() {
+
+//    const url='https://jsonplaceholder.typicode.com/posts'
+//    const confiquration={method:"GET"}
+//    fetch(url, confiquration)
+//    .then(response => response.json())
+//    .then(data=>{
+//       console.log(data);
+//    })
+//    .catch(err => console.log(err));
+    
+   
+// }
+
+
+function postApiRequest() {
+
+   fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify({
+   "name": "John Doe", "email": "johndoe@example.com"
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+   
 }
+
