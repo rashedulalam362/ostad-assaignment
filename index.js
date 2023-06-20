@@ -216,3 +216,28 @@ console.log(interResult); // Output: true
 //    let myPara=document.getElementById('my-para')
 //      myPara.style.background='none'
 // }
+
+
+//11.Create Element & Append Element:
+
+
+// function adItems() {
+//    let inputValue=document.getElementById('input').value;
+//    let  listItems=document.createElement('li');
+//     listItems.innerHTML=inputValue;
+//   var  LitsItem=document.getElementById('list-items');
+//   LitsItem.appendChild(listItems)
+ 
+// }
+
+
+// 12.DOM Change Attribute Value:
+
+ function imageChange() {
+
+   myImg=document.getElementById('img')
+   myImg.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjZUd44biMmyIlKY0g70iDnH3XqxtnPNROkQ&usqp=CAU"
+   myImg.width="200"
+   myImg.height='200'
+   
+ }
