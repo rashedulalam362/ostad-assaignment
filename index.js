@@ -233,11 +233,20 @@ console.log(interResult); // Output: true
 
 // 12.DOM Change Attribute Value:
 
- function imageChange() {
+//  function imageChange() {
 
-   myImg=document.getElementById('img')
-   myImg.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjZUd44biMmyIlKY0g70iDnH3XqxtnPNROkQ&usqp=CAU"
-   myImg.width="200"
-   myImg.height='200'
+//    myImg=document.getElementById('img')
+//    myImg.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjZUd44biMmyIlKY0g70iDnH3XqxtnPNROkQ&usqp=CAU"
+//    myImg.width="200"
+//    myImg.height='200'
    
- }
+//  }
+
+//13.DOM Query Selector:
+
+function querySelectorfun() {
+   document.querySelector("#my-id").style.color='red';
+   document.querySelector(".my-class").style.color='red';
+   document.querySelector("p[name='my-tag']").style.color='red';
+      
+}
